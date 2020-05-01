@@ -33,7 +33,7 @@ class TestViews(TestCase):
         response = self.client.post("/add", {"name": "Create a Test"})
         item = get_object_or_404(Item, pk=1)
         self.assertEqual(item.done, False)
-    
+
     def test_edit_an_item(self):
         item = Item(name="Create at Test")
         item.save()
@@ -43,7 +43,7 @@ class TestViews(TestCase):
         item = get_object_or_404(Item, pk=id)
 
         self.assertEqual("A different name", item.name)
-    
+
     def test_toggle_status(self):
         item = Item(name="Create at Test")
         item.save()

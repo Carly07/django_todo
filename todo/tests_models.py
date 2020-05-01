@@ -12,7 +12,6 @@ class TestItemModel(TestCase):
         self.assertEqual(item.name, "Create a Test")
         self.assertFalse(item.done)
 
-    
     def test_can_create_an_item_with_a_name_and_status(self):
         item = Item(name="Create a Test", done=True)
         item.save()
